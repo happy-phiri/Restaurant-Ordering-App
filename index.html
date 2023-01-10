@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Ordering App</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
+
+    <!-- CSS STYLESHEET -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Hamburgers &AMP; Pizzas</h1>
+            <p>The best burgers and pizzas in town</p>
+        </header>
+
+        <div class="menu-items" id="menu-items">
+            <!-- MENU ITEMS HERE -->
+        </div>
+
+        <div class="order" id="order">
+            <h2>Your Order</h2>
+            <div class="ordered-items" id="ordered-items">
+                <div class="ordered-list">
+                    <!-- LIST OF ORDERS -->
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="total">
+                    <p class="item-name">Total Price:</p>
+                    <p class="total-price">$0</p>
+                </div>
+            </div>
+            <button class="complete-order-btn" data-complete-order="complete">Complete Order</button>
+        </div>
+
+        <!-- PAYMENT MODAL -->
+        <div class="payment-modal toggle-modal" id="modal">
+            <h2>Enter card details</h2>
+            <form>
+                <input type="text" placeholder="Enter your name" id="customer-name" aria-label="Enter your name" required>
+                <input type="number" id="card-number" placeholder="Enter card number" aria-label="Enter card number" required>
+                <input type="number" id="cvv-number" placeholder="Enter CVV number" aria-label="Enter CVV number" required>
+            </form>
+                <button class="pay-btn" data-payment="pay">Pay</button>
+
+        </div>
+
+        <div class="acknowledgement" id="secondary-modal">
+            <p>Thanks <span class="customer"></span>! Your order is on its way!</p>
+        </div>
+    </div>
+
+    <script src="script.js" type="module"></script>
+</body>
+</html>
